@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
-import Sprite from "./sprite.png";
+// import Sprite from "../src/Sprite.png";
+import sprite from './Sprite.png'
 
 const Dot = props => <div className="dot" />
 const Container = ({children}) => (
@@ -27,7 +28,7 @@ class App extends React.Component {
     const Boxes = props =>
       this.props.num.map((val, idx) => (
         <Container key={Math.random() * 10}>
-          {this.state.index === idx ? <Dot /> : null}
+          {this.state.index === idx ? <img src={sprite}/> : null}
         </Container>
       ));
     return (
