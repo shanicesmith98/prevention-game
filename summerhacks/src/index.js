@@ -5,7 +5,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App num={[1, 5, 3, 5, 6]} />
+    <App num={[1, 1, 1, 1, 1]} />
   </React.StrictMode>,
   document.getElementById('root')
 );

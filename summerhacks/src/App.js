@@ -9,17 +9,24 @@ const Container = ({children}) => (
 
 class App extends React.Component {
   state = {
-    index: 2,
+    horizontalIndex: 2,
+    verticalIndex: 0,
     number: []
   };
 
   componentDidMount() {
     document.addEventListener("keydown", e => {
       if (e.key === "ArrowRight") {
-        this.setState({ index: ++this.state.index });
+        this.setState({ horizontalIndex: ++this.state.horizontalIndex });
       }
       if (e.key === "ArrowLeft") {
-        this.setState({ index: --this.state.index });
+        this.setState({ horizontalIndex: --this.state.horizontalIndex });
+      }
+      if (e.key === "ArrowUp") {
+        this.setState({ verticalIndex: ++this.state.verticalIndex });
+      }
+      if (e.key === "ArrowDown") {
+        this.setState({ verticalIndex: --this.state.verticalIndex });
       }
     });
   }
@@ -34,7 +41,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="root">
-          <Boxes />
+          <div className="grid">
+            <Boxes />
+          </div>
         </div>
       </div>
     );
