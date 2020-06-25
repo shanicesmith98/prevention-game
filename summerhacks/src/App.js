@@ -1,10 +1,10 @@
-import React , { Component } from 'react';
-// import Sprite from "../src/Sprite.png";
-import sprite from './Sprite.png'
+import React from 'react';
+import Sprite from './Sprite.png';
+import './App.css';
 
-const Dot = props => <div className="dot" />
+// const Dot = props => <div className="dot" />
 const Container = ({children}) => (
-  <div className = "container" style={{width: "100px", height: "100px"}}>{children}</div>
+  <div className = "Container">{children}</div>
 );
 
 class App extends React.Component {
@@ -28,7 +28,7 @@ class App extends React.Component {
     const Boxes = props =>
       this.props.num.map((val, idx) => (
         <Container key={Math.random() * 10}>
-          {this.state.index === idx ? <img src={sprite}/> : null}
+          {this.state.index === idx ? <img className="Sprite" src={Sprite} alt="Game Sprite"/> : null}
         </Container>
       ));
     return (
