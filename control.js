@@ -30,7 +30,7 @@ window.onload = function() {
 
 		window.requestAnimationFrame(loop); 
 	} 
-
-	loop(); 
+	// reduce window system load time
+	window.requestAnimationFrame(loop); 
 
 } 
