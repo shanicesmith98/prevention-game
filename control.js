@@ -6,7 +6,6 @@ can.width = 1920;
 can.height = 550;
 
 
-
 //pictures
 var img = new Image();
 img.src = "buildings.jpg";
@@ -21,9 +20,8 @@ window.onload = function () {
 
 	function loop() {
 		ctx.drawImage(img, imgWidth, 0, can.width, can.height);
+
 		ctx.drawImage(img, imgWidth + can.width, 0, can.width, can.height);
-
-
 
 		// update image width 
 		imgWidth -= scrollSpeed;
@@ -31,9 +29,8 @@ window.onload = function () {
 		if (imgWidth == -can.width)
 			imgWidth = 0;
 
-
 		window.requestAnimationFrame(loop);
 	}
-
-	loop();
+	// reduce window system load time
+	window.requestAnimationFrame(loop);
 } 
