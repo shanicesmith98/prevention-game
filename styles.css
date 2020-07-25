@@ -1,6 +1,10 @@
 @import
 url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900');
 
+body {
+    background-color: #844782;
+}
+
 h1 {
     color: white; 
     text-align: center; 
@@ -11,5 +15,4 @@ h1 {
 
 #canvas1 {
     width: 100%;
-    height: auto;
 }
