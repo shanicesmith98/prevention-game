@@ -47,7 +47,7 @@ window.onload = function () {
 			ctx.drawImage(sprite, 40, 290, 120, 160)
 		}
 		if (32 in keysDown) {
-			ctx.drawImage(sprite, 40, 220, 120, 160)
+			ctx.drawImage(sprite, 40, 200, 120, 160)
 		}
 
 
